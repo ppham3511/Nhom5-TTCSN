@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .login {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Đăng Nhập</h1>
+        <form>
+            <input type="text" placeholder="Tên đăng nhập" required>
+            <input type="password" placeholder="Mật khẩu" required>
+            <button type="submit"><a href="Web.html" target="_self" style="text-decoration: none; color: black;">Đăng Nhập</a></button>
+        </form>
+        <p>Chưa có tài khoản? <a href="#" onclick="Register()" style="text-decoration:none; color: blue;">Đăng ký ngay</a></p>
+    </div>
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Đăng nhập thành công!');
+        });
+
+        function Register() {
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
